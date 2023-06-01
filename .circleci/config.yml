@@ -47,7 +47,7 @@ jobs:
     steps:
       - attach_workspace:
         at: -/project
-      -heroku/deploy-via-git:
+      - heroku/deploy-via-git:
         force:true
   say-hello:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
