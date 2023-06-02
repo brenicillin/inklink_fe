@@ -1,0 +1,38 @@
+<h1>Artist Registration</h1>
+
+<%= form_with url: artists_path, method: :post, local: true do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %><br>
+  <%= form.label :username, "Username" %>
+  <%= form.text_field :username %><br>
+  <%= form.label :password, "Password" %>
+  <%= form.text_field :password %><br>
+  <%= form.label :verify_password, "Verify Password" %>
+  <%= form.text_field :verify_password %><br>
+  <%= form.label :pricing, "Pricing" %>
+  <%= form.text_field :pricing %><br>
+  <%= form.label :contact_info, "Contact Info" %>
+  <%= form.text_field :contact_info %><br>
+  <h3>Styles</h3>
+  <%= form.label :watercolor, "Watercolor" %>
+  <%= form.check_box :watercolor, {} %>
+  <%= form.label :american_traditional, "American Traditional" %>
+  <%= form.check_box :american_traditional, {}%>
+  <%= form.label :geometric, "Geometric" %>
+  <%= form.check_box :geometric, {}%>
+  <%= form.label :script, "Script" %>
+  <%= form.check_box :script, {}%>
+  <%= form.label :black_and_gray, "Black and Gray" %>
+  <%= form.check_box :black_and_gray, {}%>
+  <%= form.label :realism, "Realism" %>
+  <%= form.check_box :realism, {}%>
+  <%= form.label :tribal, "Tribal" %>
+  <%= form.check_box :tribal, {}%>
+  <%= form.label :chicano, "Chicano" %>
+  <%= form.check_box :chicano, {}%>
+  <%= form.label :irezumi, "Irezumi" %>
+  <%= form.check_box :irezumi, {}%>
+  <%= form.label :new_school, "New School" %>
+  <%= form.check_box :new_school, {}%><br>
+  <%= form.submit "Register Artist" %>
+<% end %>
