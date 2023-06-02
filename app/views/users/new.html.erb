@@ -1,0 +1,15 @@
+<h1>User Registration</h1>
+
+<%= form_with url: users_path, method: :post, local: true do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %>
+  <%= form.label :username, "Username" %>
+  <%= form.text_field :username %>
+  <%= form.label :password, "Password" %>
+  <%= form.text_field :password %>
+  <%= form.label :verify_password, "Verify Password" %>
+  <%= form.text_field :verify_password %>
+  <%= form.label :city, "City" %>
+  <%= form.text_field :city %>
+  <%= form.submit "Register User" %>
+<% end %>
