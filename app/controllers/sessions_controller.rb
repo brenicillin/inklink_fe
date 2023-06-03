@@ -3,17 +3,52 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-        session[:user_id] = user.id
-        redirect_to user_path(user), notice: "Welcome, #{user.name}!"
+    @user = User.new(user_params)
+    # require 'pry'; binding.pry
+    if @user.password != @user.password_confirmation
+      flash[:alert] = "Passwords do not match!"
+      render :new 
+    elsif @user.save
+      session[:user_id] = @user.id
+      flash[:success] = "Welcome, #{@user.name}!"
+      redirect_to user_path(@user)
     else
-      flash[:alert] = "Invalid Credentials"
-      render "/login"
+      flash[:alert] = @user.errors.full_messages.join(", ")
+      render :new
     end
   end
 
-  def destroy
+  # def create
+  #   user = User.find_by(email: params[:email])
+  #   if user && user.authenticate(params[:password])
+  #       session[:user_id] = user.id
+  #       flash[:success] = "Welcome, #{user.name}!"
+  #       redirect_to '/'
+  #   elsif
+  #       flash[:error] = "Your password is incorrect."
+  #       redirect_to '/login'
+  #   else
+  #     flash[:error] = "We don't have an account for that email."
+  #     redirect_to '/login'
+  #   end
+  # end
+  
+  def login_form
+  end
+
+  def login_user
+    user = User.find_by(email: params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      flash[:success] = "Welcome back, #{user.name}!"
+      redirect_to user_path(user)
+    else
+      flash[:error] = "Information Incorrect!"
+      redirect_to '/login'
+    end
+  end
+
+  def logout_user
     redirect_to root_path
   end
 end
