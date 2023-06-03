@@ -3,7 +3,7 @@
 <%= button_to "Artist Register", new_artist_path, method: :get %>
 <%= button_to "User Register", new_user_path, method: :get %>
 
-<% if logged_in? %>
+<% if session[:user_id] %>
   <%= button_to "Logout", logout_path, method: :delete %>
   <% else %>
   <%= button_to "Login", login_path, method: :get%>
