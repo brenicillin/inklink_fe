@@ -6,18 +6,14 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        flash[:success] = "Welcome, #{user.name}!"
-        redirect_to '/'
-    elsif
-        flash[:error] = "Your password is incorrect."
-        redirect_to '/login'
+        redirect_to user_path(user), notice: "Welcome, #{user.name}!"
     else
-      flash[:error] = "We don't have an account for that email."
-      redirect_to '/login'
+      flash[:alert] = "Invalid Credentials"
+      render "/login"
     end
   end
 
-  def delete
+  def destroy
     redirect_to root_path
   end
 end
