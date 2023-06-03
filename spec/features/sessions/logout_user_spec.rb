@@ -14,7 +14,10 @@ RSpec.describe "Logout Page" do
       
       click_button "Submit"
 
-      expect(current_path).to eq(root_path)
+      expect(current_path).to eq(user_path(user))
+
+      visit root_path
+      
       expect(page).to have_button("Logout")
 
       click_button "Logout"
