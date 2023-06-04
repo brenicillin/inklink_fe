@@ -16,7 +16,7 @@ RSpec.describe "Login Page" do
     end
 
     it "existing user can fill in login form with information" do
-      user = User.create!(name: "Angel Byun", username: "angelbyun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
+      user = User.create!(name: "Angel Byun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
 
       visit root_path
       
@@ -34,7 +34,7 @@ RSpec.describe "Login Page" do
     end
 
     it 'has an error message when user inputs wrong password' do
-      user = User.create!(name: "Angel Byun", username: "angelbyun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
+      user = User.create!(name: "Angel Byun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
 
       visit root_path
 
@@ -50,7 +50,7 @@ RSpec.describe "Login Page" do
     end
 
     it 'has an error message when user inputs wrong email' do
-      user = User.create!(name: "Angel Byun", username: "angelbyun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
+      user = User.create!(name: "Angel Byun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
 
       visit root_path
 

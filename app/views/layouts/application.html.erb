@@ -15,7 +15,7 @@
       <%= content_tag :div, msg, class: name %>
     <% end %>
     <%= link_to "Home", root_path %>
-    <% if @_current_user %>
+    <% if current_user %>
       <%= link_to "Logout", logout_path, method: :delete %>
     <% end %>
     <%= yield %>

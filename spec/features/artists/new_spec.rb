@@ -6,9 +6,8 @@ RSpec.describe "Artist New" do
       visit new_artist_path
 
       expect(page).to have_field("Name")
-      expect(page).to have_field("Username")
       expect(page).to have_field("Password")
-      expect(page).to have_field("Verify Password") 
+      expect(page).to have_field("Confirm Password") 
       expect(page).to have_field("Pricing")
       expect(page).to have_field("Contact Info")
       expect(page).to have_button("Register Artist")

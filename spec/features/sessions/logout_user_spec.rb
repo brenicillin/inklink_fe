@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "Logout Page" do
   describe "Logout Page" do
     it "creates a button to logout once a user has logged in successfully" do
-      user = User.create!(name: "Angel Byun", username: "angelbyun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
+      user = User.create!(name: "Angel Byun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
       
       visit root_path
 

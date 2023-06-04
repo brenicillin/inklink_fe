@@ -6,3 +6,10 @@
   <%= form.text_field :search %>
   <%= form.submit "Start Search" %>
 <% end %>
+
+<h3>Discover Tattoos</h3>
+<%= form_with url: user_discover_index_path(@user), method: :get, local: true do |form| %>
+  <%= form.label :styles %><br>
+  <%= form.select :styles, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %>
+  <%= form.submit "Search" %>
+<% end %>
