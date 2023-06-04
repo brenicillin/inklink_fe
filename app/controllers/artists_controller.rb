@@ -11,8 +11,10 @@ class ArtistsController < ApplicationController
         confirm_password: params[:confirm_password],
         pricing: params[:pricing],
         styles: params[:styles],
+        contact_info: params[:contact_info],
     }
     response = conn.post('artists', 'artist' => artist)
+    require 'pry'; binding.pry
     redirect_to root_path
     end
 
