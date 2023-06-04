@@ -20,25 +20,11 @@
   <%= form.text_field :contact_info %><br>
 
   <h3>Styles</h3>
-  <%= form.label :watercolor, "Watercolor" %>
-  <%= form.check_box :watercolor, {} %>
-  <%= form.label :american_traditional, "American Traditional" %>
-  <%= form.check_box :american_traditional, {}%>
-  <%= form.label :geometric, "Geometric" %>
-  <%= form.check_box :geometric, {}%>
-  <%= form.label :script, "Script" %>
-  <%= form.check_box :script, {}%>
-  <%= form.label :black_and_gray, "Black and Gray" %>
-  <%= form.check_box :black_and_gray, {}%>
-  <%= form.label :realism, "Realism" %>
-  <%= form.check_box :realism, {}%>
-  <%= form.label :tribal, "Tribal" %>
-  <%= form.check_box :tribal, {}%>
-  <%= form.label :chicano, "Chicano" %>
-  <%= form.check_box :chicano, {}%>
-  <%= form.label :irezumi, "Irezumi" %>
-  <%= form.check_box :irezumi, {}%>
-  <%= form.label :new_school, "New School" %>
-  <%= form.check_box :new_school, {}%><br>
+  
+  <% styles = ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"]%>
+  <% styles.each do |styles| %>
+    <%= form.label styles, styles %>
+    <%= form.check_box :styles, { multiple: true }, styles, false %>
+  <% end %><br>
   <%= form.submit "Register Artist" %>
 <% end %>
