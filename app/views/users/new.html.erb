@@ -3,15 +3,20 @@
 <%= form_with url: users_path, method: :post, local: true do |form| %>
   <%= form.label :name, "Name" %>
   <%= form.text_field :name %><br>
-  <%= form.label :username, "Username" %>
-  <%= form.text_field :username %><br>
+
   <%= form.label :email, "Email" %>
   <%= form.text_field :email %><br>
+
   <%= form.label :password, "Password" %>
-  <%= form.text_field :password %><br>
-  <%= form.label :password_confirmation, "Password Confirmation" %>
-  <%= form.text_field :password_confirmation %><br>
+  <%= form.password_field :password %><br>
+
+  <%= form.label :confirm_password, "Confirm Password" %>
+  <%= form.password_field :confirm_password %><br>
+
   <%= form.label :city, "City" %>
   <%= form.text_field :city %><br>
+
   <%= form.submit "Register User" %>
 <% end %>
+
+<% button_to "Register with Google", "/auth/google_oauth2" %>
