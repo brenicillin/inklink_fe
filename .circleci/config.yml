@@ -48,9 +48,7 @@ workflows:
           requires:
             - build-and-test
           post-steps:
-            - run:
-                name: migrate
-                command: heroku run -a inklink rails db:migrate
+            - run: heroku rake db:migrate
           filters:
             branches:
               only:
