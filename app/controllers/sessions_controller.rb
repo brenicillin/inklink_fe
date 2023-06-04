@@ -18,6 +18,18 @@ class SessionsController < ApplicationController
     end
   end
 
+  def omniauth
+    user = User.from_omniauth(request.env['omniauth.auth'])
+    if user.valid?
+      session[:user_id] = user.id
+      flash[:success] = "Welcome, #{user.name}!"
+      redirect_to user_path(user)
+    else
+      flash[:error] = user.errors.full_messages.join(", ")
+      redirect_to login_path
+    end
+  end
+
   # def create
   #   user = User.find_by(email: params[:email])
   #   if user && user.authenticate(params[:password])

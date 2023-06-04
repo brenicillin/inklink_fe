@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   get 'home/index'
   root to: "home#index"
   get '/login', to: 'sessions#login_form'
+  get '/auth/:provider/callback', to: 'sessions#omniauth'
   post '/login', to: 'sessions#login_user'
-  # get '/login', to: 'sessions#new'
   delete '/logout', to: 'sessions#logout_user'
   resources :sessions, only: [:create]
 
