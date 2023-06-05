@@ -2,17 +2,16 @@ require 'rails_helper'
 
 RSpec.describe DiscoverService do
   before(:each) do
-    require 'pry'; binding.pry
-    stub_request(:get, "https://inklink-be.herokuapp.com/api/v0/users/1/search&query=watercolor+tattoos")
+    stub_request(:get, "https://inklink-be.herokuapp.com/api/v0/discover?query=geometric+tattoos")
      .to_return(status: 200, body: File.read("./spec/fixtures/discover_service.json"))
   end
+
   describe 'class methods' do
     it 'returns a JSON including photos' do
-      response = DiscoverService.photos(params[:styles] = "watercolor")
+      response = DiscoverService.photos("geometric")
       expect(response).to be_a(Hash)
-      expect(response[:photos]).to be_an(Array)
-      expect(response[:photos][0]).to be_a(Hash)
-
+      expect(response[:value]).to be_an(Array)
+      expect(response[:value][0]).to have_key(:thumbnail)
     end
   end
 end

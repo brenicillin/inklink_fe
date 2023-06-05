@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   validates_presence_of :name,
                         :email,
-                        :password_digest
+                        :password_digest,
+                        :city
   validates_presence_of :password, confirmation: {case_sensitive: true}
   validates_uniqueness_of :email
 
