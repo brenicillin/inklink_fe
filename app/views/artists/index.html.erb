@@ -1,0 +1,8 @@
+<h1>Artist Search Results</h1>
+
+<% @artists.each do |artist| %>
+  <b><%= artist.name %></b>
+  <%= artist.styles %>
+  <%= artist.email %>
+  <%= artist.pricing %>
+<% end %>
