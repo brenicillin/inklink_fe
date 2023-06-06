@@ -2,7 +2,10 @@
 
 <% @artists.each do |artist| %>
   <b><%= artist.name %></b><br>
+  <b>Specializes in:</b><br>
   <%= artist.styles %><br>
+  <b>Contact Email:</b><br>
   <%= mail_to artist.email %><br>
+  <b>Pricing:</b><br>
   <%= artist.pricing %><br>
 <% end %>

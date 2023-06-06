@@ -5,7 +5,6 @@ class Artist
               :pricing
 
   def initialize(data)
-    require 'pry'; binding.pry
     @name = data[0][:attributes][:name]
     @email = data[0][:attributes][:email]
     @pricing = data[0][:attributes][:pricing]
