@@ -5,13 +5,14 @@ class Artist
               :pricing
 
   def initialize(data)
-    @name = data[:name]
-    @email = data[:email]
-    @pricing = data[:pricing]
-    @styles = if data[:styles].class == Array
-                data[:styles].join(", ")
+    require 'pry'; binding.pry
+    @name = data[0][:attributes][:name]
+    @email = data[0][:attributes][:email]
+    @pricing = data[0][:attributes][:pricing]
+    @styles = if data[0][:attributes][:styles].class == Array
+                data[0][:attributes][:styles].join(", ")
               else
-                data[:styles]
+                data[0][:attributes][:styles]
               end
   end
 end

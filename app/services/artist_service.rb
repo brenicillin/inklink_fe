@@ -1,17 +1,11 @@
 class ArtistService
-
-  def self.conn
-    Faraday.new(url: "https://inklink-be.herokuapp.com/api/v0") do |f|
-      f.params = {style = params[:style]}
-    end
+  def self.artists(style)
+    get_url("https://inklink-be.herokuapp.com/api/v0/artists?style=#{style}")
   end
 
   def self.get_url(url)
-    response = conn.get
+    response = Faraday.get(url)
     parsed = JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.artists
-    get_url("/artists")
-  end
 end
