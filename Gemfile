@@ -92,5 +92,4 @@ group :test do
   gem "shoulda-matchers"
   gem "orderly"
   gem 'webmock'
-  gem 'vcr'
 end
