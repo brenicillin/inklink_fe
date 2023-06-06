@@ -1,7 +1,5 @@
 class DiscoverController < ApplicationController
   def index
-    response = Faraday.new(url: 'https://inklink-be.herokuapp.com/api/v0/discover') do |faraday|
-      faraday.params = { discover: params[:styles] }
-    end
+    @facade = DiscoverFacade.find_photos(params[:discover])
   end
 end
