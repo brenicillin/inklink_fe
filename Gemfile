@@ -50,7 +50,12 @@ gem "bootsnap", require: false
 
 gem "faraday"
 
+
 gem "bcrypt", "~> 3.1.7"
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
+gem "figaro"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -64,6 +69,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "net-http"
   gem "launchy"
+  gem "dotenv-rails"
 end
 
 group :development do
@@ -85,4 +91,5 @@ group :test do
   gem "pry-rails"
   gem "shoulda-matchers"
   gem "orderly"
+  gem 'webmock'
 end
