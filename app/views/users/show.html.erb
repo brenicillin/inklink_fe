@@ -4,14 +4,14 @@
 <%= form_with url: user_search_index_path(params[:id]), method: :get, local: true do |form| %>
   <%= form.label :city, "City" %>
   <%= form.text_field :city %>
-  <%= form.submit "Start Search" %>
+  <%= form.submit "Search by City" %>
 <% end %>
 
 <h3>Find Artists By Style</h3>
 <%= form_with url: artists_path, method: :get, local: true do |form| %>
   <%= form.label :style, "Style" %>
   <%= form.select :style, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %>
-  <%= form.submit "Start Search" %>
+  <%= form.submit "Search by Style" %>
 <% end %>
 
 
