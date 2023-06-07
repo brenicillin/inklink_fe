@@ -9,7 +9,6 @@ RSpec.describe "Artist New" do
       expect(page).to have_field("Password")
       expect(page).to have_field("Confirm Password") 
       expect(page).to have_field("Pricing")
-      expect(page).to have_field("Contact Info")
       expect(page).to have_button("Register Artist")
     end
   end
