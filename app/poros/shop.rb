@@ -3,7 +3,7 @@ class Shop
               :address
 
   def initialize(data)
-    @name = data[:name]
-    @address = data[:address]
+    @name = data[:attributes][:name]
+    @address = data[:attributes][:address]
   end
 end
