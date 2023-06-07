@@ -1,10 +1,16 @@
 class SearchService
   def self.shops(city)
-    get_url("https://inklink-be.herokuapp.com/api/v0/search?query=#{city}")
+    get_url("/api/v0/search?city=#{city}")
   end
 
   def self.get_url(url)
-    response = Faraday.get(url)
+    response = conn.get(url)
     parsed = JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.conn
+    Faraday.new(url: "https://inklink-be.herokuapp.com") do |faraday|
+      faraday.headers = { 'CONTENT_TYPE' => 'application/json'}
+    end
   end
 end
