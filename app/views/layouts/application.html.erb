@@ -14,9 +14,11 @@
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
     <% end %>
-    <%= link_to "Home", root_path %>
     <% if current_user %>
       <%= link_to "Logout", logout_path, method: :delete %>
+      <%= link_to "Dashboard", user_path(current_user) %>
+    <% else %>
+      <%= link_to "Home", root_path %>
     <% end %>
     <%= yield %>
   </body>

@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
     email = auth_hash['info']['email']
 
     user = User.from_omniauth(auth_hash)
-    require 'pry'; binding.pry
     user.update(uid: uid, provider: provider)
 
     session[:user_id] = user.id

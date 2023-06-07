@@ -1,4 +1,9 @@
 class ArtistsController < ApplicationController
+
+  def index
+   @artists = ArtistFacade.find_artists(params[:style])
+  end
+
   def new
   end
 
