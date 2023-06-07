@@ -1,14 +1,17 @@
-class DiscoverService 
-  def self.conn
-    Faraday.new(url: "https://inklink-be.herokuapp.com/api/v0/users/#{params[:user_id]}/search}")
+class DiscoverService  
+  def self.list_photos(style)
+    get_url("/api/v0/discover?discover=#{style}+tattoos")
   end
-
+  
   def self.get_url(url)
     response = conn.get(url)
+    # require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.photos
-    get_url("&query=#{params[:styles]} + tattoos")
+  def self.conn
+    Faraday.new(url: "https://inklink-be.herokuapp.com") do |faraday|
+      faraday.headers = { 'CONTENT_TYPE' => 'application/json' }
+    end
   end
 end
