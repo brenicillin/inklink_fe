@@ -11,12 +11,15 @@
   </head>
 
   <body class="bg-black text-light alert-warning">
+    <div class="bg-white container text-center">
+      <%= image_tag("/assets/inklink.jpg", size: '300x150')%>
+    </div>
     <div id="flash-msg">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, class: name %>
       <% end %>
     </div>
-    <div class="navbar-text bg-danger text-end">
+    <div class="navbar-text navbar-expand-sm bg-danger text-end">
       <% if current_user %>
         <%= link_to "Logout", logout_path, method: :delete %>
         <%= link_to "Dashboard", user_path(current_user) %>
