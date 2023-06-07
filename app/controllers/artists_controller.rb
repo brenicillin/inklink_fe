@@ -19,7 +19,6 @@ class ArtistsController < ApplicationController
         contact_info: params[:contact_info],
     }
     response = conn.post('artists', 'artist' => artist)
-    require 'pry'; binding.pry
     redirect_to root_path
     end
 

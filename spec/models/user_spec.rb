@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
     it { should have_secure_password }
 
     it 'validates the validations' do
-      user = User.create!(name: "Angel Byun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345", city: "Denver")
+      user = User.create!(name: "Angel Byun", email: "angelb12345@gmail.com", password: "12345", password_confirmation: "12345")
       expect(user).to_not have_attribute(:password)
       expect(user.password_digest).to_not eq("12345")
     end
