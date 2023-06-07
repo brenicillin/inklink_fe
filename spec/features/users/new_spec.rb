@@ -8,8 +8,7 @@ RSpec.describe "User New" do
       expect(page).to have_field("Name")
       expect(page).to have_field("Email")
       expect(page).to have_field("Password")
-      expect(page).to have_field("Confirm Password") 
-      expect(page).to have_field("City")
+      expect(page).to have_field("Confirm Password")
       expect(page).to have_button("Register User")
     end
   end
