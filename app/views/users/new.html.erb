@@ -1,19 +1,23 @@
-<h1>User Registration</h1>
+<h1 class="text-center">User Registration</h1>
 
-<%= form_with url: users_path, method: :post, local: true do |form| %>
-  <%= form.label :name, "Name" %>
-  <%= form.text_field :name %><br>
+<body>
+  <div class="text-center bi-eye-fill">
+    <%= form_with url: users_path, method: :post, local: true do |form| %>
+      <%= form.label :name, "Name" %><br>
+      <%= form.text_field :name %><br>
 
-  <%= form.label :email, "Email" %>
-  <%= form.text_field :email %><br>
+      <%= form.label :email, "Email" %><br>
+      <%= form.text_field :email %><br>
 
-  <%= form.label :password, "Password" %>
-  <%= form.password_field :password %><br>
+      <%= form.label :password, "Password" %><br>
+      <%= form.password_field :password %><br>
 
-  <%= form.label :confirm_password, "Confirm Password" %>
-  <%= form.password_field :confirm_password %><br>
+      <%= form.label :confirm_password, "Confirm Password" %><br>
+      <%= form.password_field :confirm_password %><br><br>
 
-  <%= form.submit "Register User" %>
-<% end %>
+      <%= form.submit "Register User", class: "btn btn-primary" %>
+    <% end %><br>
 
-<% button_to "Register with Google", "/auth/google_oauth2" %>
+    <%= link_to "Register with Google", "/auth/google_oauth2" %>
+  </div>
+</body>

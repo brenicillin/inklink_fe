@@ -1,11 +1,13 @@
-<h1>User Login</h1>
+<h1 class="text-center">User Login</h1>
 
-<%= form_with url: login_path, method: :post  do |form| %>
-    <%= form.label :email, "Email" %><br>
-    <%= form.text_field :email %> <br>
-    <%= form.label :password, "Password" %><br>
-    <%= form.password_field :password %><br>
-    <p><%= form.submit "Submit" %></p>
-<% end %>
-
-<%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+<body>
+	<div class="text-center bi-eye-fill">
+    <%= form_with url: login_path, method: :post  do |form| %>
+			<%= form.label :email, "Email" %><br>
+			<%= form.text_field :email %> <br><br>
+			<%= form.label :password, "Password" %><br>
+			<%= form.password_field :password %><br><br>
+			<%= form.submit "Submit" %>
+		<% end %>
+	</div>
+</body>

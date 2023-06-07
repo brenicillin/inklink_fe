@@ -1,24 +1,30 @@
-<h1>User Dashboard</h1>
-
-<h3>Search for Shops</h3>
-<%= form_with url: user_search_index_path(params[:id]), method: :get, local: true do |form| %>
-  <%= form.label :city, "City" %>
-  <%= form.text_field :city %>
-  <%= form.submit "Search by City" %>
-<% end %>
-
-<h3>Find Artists By Style</h3>
-<%= form_with url: artists_path, method: :get, local: true do |form| %>
-  <%= form.label :style, "Style" %>
-  <%= form.select :style, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %>
-  <%= form.submit "Search by Style" %>
-<% end %>
-
-
-
-<h3>Discover Tattoos</h3>
-<%= form_with url: user_discover_index_path(params[:id]), method: :get, local: true do |form| %>
-  <%= form.label :discover %><br>
-  <%= form.select :discover, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %>
-  <%= form.submit "Search" %>
-<% end %>
+<h1 class="text-center">User Dashboard</h1>
+<p class="text-center bi-eye-fill"></p>
+<body>
+  <div id="city-search" class="container-sm p-3 bg-dark text-center">
+    <h3>Search for Shops</h3>
+      <%= form_with url: user_search_index_path(params[:id]), method: :get, local: true do |form| %>
+        <% form.label :city %>
+        <%= form.text_field :city %><br>
+        <%= form.submit "Search by City" %>
+      <% end %>
+  </div>
+  <br>
+  <div id="style-search" class="container-sm p-3 bg-dark text-center">
+    <h3>Find Artists By Style</h3>
+      <%= form_with url: artists_path, method: :get, local: true do |form| %>
+        <% form.label :style %>
+        <%= form.select :style, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %><br>
+        <%= form.submit "Search by Style" %>
+      <% end %>
+  </div>
+<br>
+  <div id="discover-tattoos" class="container-sm p-3 bg-dark text-center">
+    <h3>Discover Tattoos</h3>
+      <%= form_with url: user_discover_index_path(params[:id]), method: :get, local: true do |form| %>
+        <% form.label :discover %>
+        <%= form.select :discover, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %><br>
+        <%= form.submit "Discover Tattoos" %>
+      <% end %>
+  </div>
+</body>
