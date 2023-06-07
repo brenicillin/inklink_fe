@@ -12,7 +12,7 @@ RSpec.describe 'Discover Tattoos Index' do
       visit user_path(@user)
 
       select "Watercolor", from: :discover
-      click_button "Search"
+      click_button "Discover Tattoos"
 
       expect(current_path).to eq(user_discover_index_path(@user))
       expect(page).to have_css("img[src*='']")

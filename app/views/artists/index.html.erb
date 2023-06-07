@@ -1,11 +1,17 @@
-<h1>Artist Search Results</h1>
-
-<% @artists.each do |artist| %>
-  <b><%= artist.name %></b><br>
-  <b>Specializes in:</b><br>
-  <%= artist.styles %><br>
-  <b>Contact Email:</b><br>
-  <%= mail_to artist.email %><br>
-  <b>Pricing:</b><br>
-  <%= artist.pricing %><br>
-<% end %>
+<h1 class="text-center">Artist Search Results</h1>
+<p class="text-center bi-eye-fill"></p>
+<body>
+  <div class="container-fluid bg-black">
+    <% @artists.each do |artist| %>
+      <section class="text-center p-3 container-sm bg-dark">
+        <b><u><%= artist.name %></u></b><br><br>
+        <b>Specializes in:</b><br>
+        <%= artist.styles %><br>
+        <b>Contact Email:</b><br>
+        <%= mail_to artist.email %><br>
+        <b>Pricing:</b><br>
+        <%= artist.pricing %><br>
+      </section>
+    <% end %>
+  </div>
+</body>

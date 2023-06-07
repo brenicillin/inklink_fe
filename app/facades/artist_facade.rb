@@ -1,8 +1,9 @@
 class ArtistFacade
   
   def self.find_artists(style)
-    ArtistService.artists(style).map do |artist|
-      Artist.new(artist[1])
+    artists = ArtistService.artists(style)
+    artists[:data].map do |artist|
+      Artist.new(artist)
     end
   end
 end

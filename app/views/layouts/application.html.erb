@@ -10,16 +10,20 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: name %>
-    <% end %>
-    <% if current_user %>
-      <%= link_to "Logout", logout_path, method: :delete %>
-      <%= link_to "Dashboard", user_path(current_user) %>
-    <% else %>
-      <%= link_to "Home", root_path %>
-    <% end %>
+  <body class="bg-black text-light alert-warning">
+    <div id="flash-msg">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+    </div>
+    <div class="navbar-text bg-danger text-end">
+      <% if current_user %>
+        <%= link_to "Logout", logout_path, method: :delete %>
+        <%= link_to "Dashboard", user_path(current_user) %>
+      <% else %>
+        <%= link_to "Home", root_path %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
