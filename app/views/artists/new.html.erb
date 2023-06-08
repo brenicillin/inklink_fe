@@ -18,7 +18,7 @@
 
   <h3>Styles</h3>
   
-  <% styles = ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"]%>
+  <% styles = ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realistic", "Tribal", "Chicano", "Irezumi", "New School"]%>
   <% styles.each do |styles| %>
     <%= form.label styles, styles %>
     <%= form.check_box :styles, { multiple: true }, styles, false %>
