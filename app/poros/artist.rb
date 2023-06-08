@@ -5,13 +5,13 @@ class Artist
               :pricing
 
   def initialize(data)
-    @name = data[:attributes][:name]
-    @email = data[:attributes][:email]
-    @pricing = data[:attributes][:pricing]
-    @styles = if data[:attributes][:styles].class == Array
-                data[:attributes][:styles].join(", ")
+    @name = data[:name]
+    @email = data[:email]
+    @pricing = data[:pricing]
+    @styles = if data[:styles].class == Array
+                data[:styles].join(", ")
               else
-                data[:attributes][:styles]
+                data[:styles]
               end
   end
 end
