@@ -6,9 +6,12 @@
 **InkLink** is an app helping people find curated artists and local tattoo parlors that fit their tattoo style in their area.
 Don't know what style best fits you? Try our *Discover Style* feature to help best match you with the right style and the best artist to get you ***inked***.
 
-Experience InkLink wherever you are! Try us on the web or your mobile device! [inklink.herokuapp.com](inklink.herokuapp.com)
+Experience InkLink wherever you are! Try us on the web or your mobile device! [inklink.herokuapp.com](https://inklink.herokuapp.com)
 
 InkLink is the Consultancy group project from Turing School of Software and Design's mod three backend program. Read more: https://backend.turing.edu/module3/projects/consultancy/
+
+* [InkLink BE Repository](https://github.com/margday/inklink-be)
+* [InkLink FE Repository](https://github.com/brenicillin/inklink_fe)
 
 # Contributors
 ---
@@ -46,7 +49,9 @@ Users are also able to sign in or register using their Google account (currently
 
 ## Development setup
 
-To run the app locally, you can clone this repository on your device with Rails, run `bundle install`, `rails db:{drop,create,migrate}`, and `rails s`, and visit `localhost:3000`. You will be able to create a User account or an Artist, log in, search for tattoo ideas, search the primary database for Artists who specialize in specific tattoo styles, and search for shops in your city.
+To run the app locally, you can clone this repository on your device with Rails, run `bundle install`, `rails db:{drop,create,migrate}`, and `rails s`, and visit `localhost:3000`.
+
+You will be able to create a User or an Artist account, log in, search for tattoo ideas, search the primary database for Artists who specialize in specific tattoo styles, and search for shops in your city.
 
 
 
