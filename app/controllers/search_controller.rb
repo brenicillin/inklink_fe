@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @photos = SearchService.shops(params[:city])
+    @shops = SearchFacade.find_shops(params[:city])
   end
 end

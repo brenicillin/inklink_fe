@@ -1,0 +1,84 @@
+{
+  "data": [
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Bay City Tattoo",
+              "address": "1632 E 7th Ave (at 17th St), Tampa, FL 33605"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Las Vegas Tattoo Co.",
+              "address": "1829 E 7th Ave, Tampa, FL 33605"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Art Explosion Tattoo",
+              "address": "5130 S Dale Mabry Hwy (Gandy Blvd), Tampa, FL 33611"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Blue Devil Tattoo Gallery",
+              "address": "1712 E 7th Ave, Tampa, FL 33605"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Atomic Tattoos",
+              "address": "1512 E Fowler Ave, Tampa, FL 33612"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Tatt-Away Tattoo Removal of Tampa",
+              "address": "1601 W Platt St, Tampa, FL 33606"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "1603 Tattoo & Piercing Company",
+              "address": "1315 E 7th Ave (14th St), Ybor City, FL 33605"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Vicious Angelz Tattoo",
+              "address": "1609 E 4th Ave (16th St.), Ybor City, FL 33605"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Red Letter 1",
+              "address": "1818 N 15th St, Tampa, FL 33605"
+          }
+      },
+      {
+          "id": null,
+          "type": "shop",
+          "attributes": {
+              "name": "Old 7th Avenue Tattoo",
+              "address": "1514 E 7th Ave, Tampa, FL 33605"
+          }
+      }
+  ]
+}

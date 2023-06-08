@@ -1,1 +1,11 @@
-<h1>Tattoo Shops In <%= params[:city] %></h1>
+<h1 class="text-center">Tattoo Shops In <%= params[:city] %></h1>
+<p class="text-center bi-eye-fill"></p>
+
+<body>
+  <div class="container-sm p-3 bg-dark text-center">
+    <% @shops.each do |shop| %>
+      <b><u><%= shop.name %></u></b><br>
+      <%= shop.address %><br><br>
+    <% end %>
+  </div>
+</body>

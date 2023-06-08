@@ -1,5 +1,10 @@
-<h1>Discover Tattoo Ideas</h1>
+<h1 class="text-center">Discover Tattoo Ideas</h1>
+<p class="text-center bi-eye-fill">
 
-<% @facade.each do |photo| %>
-  <%= image_tag("#{photo.thumbnail}") %>
-<% end %>
+<body>
+  <div class="container-sm pd-3 flex-md-column bg-dark align-content-center">
+    <% @facade.each do |photo| %>
+      <%= image_tag("#{photo.thumbnail}") %>
+    <% end %>
+  </div>
+</body>

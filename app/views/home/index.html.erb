@@ -1,11 +1,18 @@
-<h1>InkLink Home</h1>
+<br>
+<h1 class="text-center">InkLink</h1>
  
-
-<% if session[:user_id] %>
-  <%= button_to "Logout", logout_path, method: :get %>
-  <% else %>
-  <%= button_to "Artist Register", new_artist_path, method: :get %>
-  <%= button_to "User Register", new_user_path, method: :get %>
-  <%= button_to "Login", login_path, method: :get%>
-  <%= link_to "Sign in with Google", "/auth/google_oauth2", class: "btn btn_blue" %>
-<% end %>
+<body>
+  <div class="text-center text-white bi-eye-fill">
+    <% if session[:user_id] %>
+      <%= button_to "Logout", logout_path, method: :get %>
+      <% else %>
+      <%= button_to "Artist Register", new_artist_path, method: :get, class: "btn btn-primary" %>
+      <br>
+      <%= button_to "User Register", new_user_path, method: :get, class: "btn btn-primary" %>
+      <br>
+      <%= button_to "Login", login_path, method: :get, class: "btn btn-primary" %>
+      <br>
+      <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+    <% end %>
+  </div>
+</body>
