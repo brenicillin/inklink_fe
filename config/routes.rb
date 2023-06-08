@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   get 'home/index'
   root to: "home#index"
@@ -5,6 +7,11 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   post '/login', to: 'sessions#login_user'
   get '/logout', to: 'sessions#logout_user'
+
+  get "/sent", to: "mailers#sent"
+  resources :mailers, only: [:create]
+
+  mount Sidekiq::Web => '/sidekiq'
 
   resources :sessions, only: [:create]
 

@@ -14,12 +14,11 @@
 
       <%= form.label :confirm_password, "Confirm Password" %><br>
       <%= form.password_field :confirm_password %><br>
-
       <%= form.label :pricing, "Pricing" %><br>
       <%= form.text_field :pricing %><br><br>
           <h3>Styles</h3><br>
         <div class="container p-1 bg-dark text-center">
-          <% styles = ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"]%>
+          <% styles = ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realistic", "Tribal", "Chicano", "Irezumi", "New School"]%>
           <% styles.each do |styles| %>
             <%= form.label styles, styles %>
             <%= form.check_box :styles, { multiple: true }, styles, false %><br>

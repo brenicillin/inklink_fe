@@ -14,7 +14,7 @@
     <h3>Find Artists By Style</h3>
       <%= form_with url: artists_path, method: :get, local: true do |form| %>
         <% form.label :style %>
-        <%= form.select :style, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %><br>
+        <%= form.select :style, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realistic", "Tribal", "Chicano", "Irezumi", "New School"] %><br>
         <%= form.submit "Search by Style" %>
       <% end %>
   </div>
@@ -23,7 +23,7 @@
     <h3>Discover Tattoos</h3>
       <%= form_with url: user_discover_index_path(params[:id]), method: :get, local: true do |form| %>
         <% form.label :discover %>
-        <%= form.select :discover, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realism", "Tribal", "Chicano", "Irezumi", "New School"] %><br>
+        <%= form.select :discover, ["Watercolor", "American Traditional", "Geometric", "Script", "Black and Gray", "Realistic", "Tribal", "Chicano", "Irezumi", "New School"] %><br>
         <%= form.submit "Discover Tattoos" %>
       <% end %>
   </div>
