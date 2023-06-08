@@ -4,10 +4,12 @@ RSpec.describe Artist do
   describe '#initialize' do
     it 'exists with attributes' do
       data_hash = {
+        attributes: {
         name: "Bob",
         email: "bob@bob.com",
         pricing: "$$$",
         styles: ["American Traditional, Geometric"]
+        }
       }
       
       bob = Artist.new(data_hash)
