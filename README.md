@@ -35,34 +35,18 @@ InkLink is the Consultancy group project from Turing School of Software and Desi
 
 
 <!-- Markdown link & img dfn's -->
-## Installation
-
-OS X & Linux:
-
-```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
-```
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+Artists - With a simple registration process, you can list yourself in our primary database of artists, selecting a specific style you prefer to work with and a rough estimate of your pricing, along with a contact email that users can directly reach you at.
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+Users - We provide the ability to not only look up Artists in our system by the specific style you'd like to be tattooed, but also provide the tools to find shops in your city. Are you planning a vacation and would like to get a tattoo in the city you're visiting? You can use our app to find shops at your destination and plan ahead! 
+
+Users are also able to sign in or register using their Google account (currently the app is in test mode, so only the developers' emails are authorized via Google OAuth2, currently in the process of being moved into released.)
 
 ## Development setup
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
+To run the app locally, you can clone this repository on your device with Rails, run `bundle install`, `rails db:{drop,create,migrate}`, and `rails s`, and visit `localhost:3000`. You will be able to create a User account or an Artist, log in, search for tattoo ideas, search the primary database for Artists who specialize in specific tattoo styles, and search for shops in your city.
 
 
 
@@ -73,4 +57,3 @@ npm test
 [npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
