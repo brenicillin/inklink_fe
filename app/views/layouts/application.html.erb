@@ -12,7 +12,9 @@
 
   <body class="bg-black text-light alert-warning">
     <div class="bg-black container text-center">
-      <%= image_tag("/assets/ink_link_blk.png", size: '300x150')%>
+      <%= link_to root_path do %>
+        <%= image_tag("/assets/ink_link_blk.png", size: '300x150') %>
+      <% end %>
     </div>
     <div id="flash-msg">
       <% flash.each do |name, msg| %>
