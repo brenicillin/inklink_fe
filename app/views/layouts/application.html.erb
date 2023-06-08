@@ -12,7 +12,9 @@
 
   <body class="bg-black text-light alert-warning">
     <div class="bg-black container text-center">
-      <%= image_tag("/assets/images/InkLinkBlk.jpg", size: '300x150') %>
+      <%= link_to root_path do %>
+        <img src="https://github.com/brenicillin/inklink_fe/blob/main/app/assets/images/InkLinkBlk.jpg?raw=true" style="width:300px;height:150px;">
+      <% end %>
     </div>
     <div id="flash-msg">
       <% flash.each do |name, msg| %>
