@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates_presence_of :name,
                         :email,
                         :password_digest
+                        :artist
   validates_presence_of :password, confirmation: {case_sensitive: true}
   validates_uniqueness_of :email
 

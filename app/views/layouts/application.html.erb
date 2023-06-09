@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
@@ -13,7 +14,7 @@
   <body class="bg-black text-light alert-warning">
     <div class="bg-black container text-center">
       <%= link_to root_path do %>
-        <%= image_tag("/assets/ink_link_blk.png", size: '300x150') %>
+        <img src="https://github.com/brenicillin/inklink_fe/blob/main/app/assets/images/InkLinkBlk.jpg?raw=true" style="width:300px;height:150px;">
       <% end %>
     </div>
     <div id="flash-msg">

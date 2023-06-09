@@ -3,6 +3,10 @@ class ArtistService
     get_url("https://inklink-be.herokuapp.com/api/v0/artists?style=#{style}")
   end
 
+  def self.artist(email)
+    get_url("https://inklink-be.herokuapp.com/api/v0/artist?email=#{email}")
+  end
+
   def self.get_url(url)
     response = Faraday.get(url)
     parsed = JSON.parse(response.body, symbolize_names: true)

@@ -6,4 +6,10 @@ class ArtistFacade
       Artist.new(artist)
     end
   end
+
+  def self.find_artist(email)
+    artist = ArtistService.artist(email)
+    require 'pry'; binding.pry
+    Artist.new(artist)
+  end
 end
