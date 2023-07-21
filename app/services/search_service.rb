@@ -9,7 +9,7 @@ class SearchService
   end
 
   def self.conn
-    Faraday.new(url: "https://inklink-api-8fcb1eda69d6.herokuapp.com") do |faraday|
+    Faraday.new(url: "http://inklink-be.com") do |faraday|
       faraday.headers = { 'CONTENT_TYPE' => 'application/json'}
     end
   end
