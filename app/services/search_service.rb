@@ -1,6 +1,6 @@
 class SearchService
   def self.shops(city)
-    get_url("/api/v0/search?city=#{city}")
+    get_url('/api/v0/search?city=#{city}')
   end
 
   def self.get_url(url)
@@ -9,7 +9,7 @@ class SearchService
   end
 
   def self.conn
-    Faraday.new(url: "http://inklink-be.com") do |faraday|
+    Faraday.new(url: 'http://inklink-be.com') do |faraday|
       faraday.headers = { 'CONTENT_TYPE' => 'application/json'}
     end
   end
