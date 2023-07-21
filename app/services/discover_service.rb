@@ -9,7 +9,7 @@ class DiscoverService
   end
 
   def self.conn
-    Faraday.new(url: "http://inklink-be.com") do |faraday|
+    Faraday.new(url: "https://inklink-be-b5a197fb428f.herokuapp.com") do |faraday|
       faraday.headers = { 'CONTENT_TYPE' => 'application/json' }
     end
   end
