@@ -1,6 +1,6 @@
 class ArtistService
   def self.artists(style)
-    get_url("https://inklink-api-8fcb1eda69d6.herokuapp.com/api/v0/artists?style=#{style}")
+    get_url("https://inklink-be-b5a197fb428f.herokuapp.com/api/v0/artists?style=#{style}")
   end
 
   def self.get_url(url)
